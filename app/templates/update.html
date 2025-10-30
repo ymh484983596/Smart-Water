@@ -1,0 +1,11 @@
+<div>
+    <h4>在该页面修改你的数据</h4>
+    <!--通过改变form标签中method属性来改变数据请求的方式-->
+    <form action="http://localhost:5000/update" method="POST">
+        请输入你需要修改的水温:<input type="text" name="water_temperature" autocomplete="off"><br/>
+        请输入修改的:<input type="text" name="name" autocomplete="off"><br/>
+        请输入修改的age:<input type="text" name="age" autocomplete="off"><br/>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/info"><button>查看数据</button></a>
+</div>

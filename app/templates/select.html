@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h4>查询数据</h4>
+    <table border="1" width="30%" weight="30%">
+        <thead>
+        <tr>
+            <th>监测信息编号</th>
+            <th>监测站编码</th>
+            <th>采样时间</th>
+             <th>水温</th>
+            <th>PH</th>
+            <th>溶解氧</th>
+             <th>电导率</th>
+            <th>叶绿素a</th>
+             <th>总磷</th>
+             <th>总氮</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+                <tr>
+                    <td>{{ result[0]}}</td>
+                    <td>{{ result[1]}}</td>
+                    <td>{{ result[2]}}</td>
+                    <td>{{ result[3]}}</td>
+                    <td>{{ result[4]}}</td>
+                    <td>{{ result[5]}}</td>
+                    <td>{{ result[6]}}</td>
+                    <td>{{ result[7]}}</td>
+                    <td>{{ result[8]}}</td>
+                    <td>{{ result[9]}}</td>
+                    <td><a href="/submit_update?info_id={{result[0]}}"><button>修改</button></a></td>
+                    <td><a href="/delete?id={{ result[0] }}"><button>删除</button></a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</html>
